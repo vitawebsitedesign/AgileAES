@@ -1,5 +1,5 @@
 ### What
-This .NET Standard library allows you to easily encrypt/decrypt between clear text & `SecureString`
+This .NET Standard library allows you to easily do AES encryption and/or ciphering between clear text & SecureString
 
 <TODO NUGET URL>
 
