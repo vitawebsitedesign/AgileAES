@@ -24,12 +24,12 @@ Decrypting:
 var decrypted = await encrypted.ToDecryptedSecureString();
 ```
 
-`ToEncryptedSecureString` & `ToDecryptedSecureString` are helper methods, which also cipher the encrypted/decrypted result via base64.
+`ToEncryptedSecureString` & `ToDecryptedSecureString` are helper methods, which also cipher/decipher the result via base64.
 
 This repo contains an "example usage" project.
 
 ### Usage (no ciphering)
-If you dont wanna cipher stuff & just want to quickly do AES encryption, or want more control over the encryption parameters, you can also use the logic directly:
+If you dont want the ciphering & just want to quickly do AES encryption, or want more control over the encryption parameters, you can also use the logic directly:
 ```c#
 using (var aes = Aes.Create())
 {
