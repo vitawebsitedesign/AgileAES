@@ -1,5 +1,6 @@
 ﻿using AgileAES.Models;
 using System;
+using System.Net;
 using System.Security;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
@@ -26,6 +27,17 @@ namespace AgileAES.Extensions
                 var ciphered = Convert.ToBase64String(encrypted);
                 return new EncryptedSecureString(ciphered.ToSecureString(), aes.Key, aes.IV);
             }
+        }
+
+        /// <summary>
+        /// Converts a SecureString into a clear text in-memory System.String
+        /// </summary>
+        /// <param name="secureStr">the SecureString to convert</param>
+        /// <returns>a clear text in-memory string</returns>
+        public static string ToClearText(this SecureString secureStr)
+        {
+            var plainEncryptedCipher = new NetworkCredential("", secureStr).Password;
+            return plainEncryptedCipher;
         }
     }
 }

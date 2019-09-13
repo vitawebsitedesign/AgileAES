@@ -1,7 +1,5 @@
 ﻿using AgileAES.Extensions;
 using System;
-using System.Net;
-using System.Security;
 using System.Threading.Tasks;
 
 namespace Example
@@ -13,17 +11,11 @@ namespace Example
             var encrypted = await "password".ToEncryptedSecureString();
             var decrypted = await encrypted.ToDecryptedSecureString();
 
-            Console.WriteLine(SecureStringToString(encrypted.String));
-            Console.WriteLine(SecureStringToString(decrypted));
+            Console.WriteLine(encrypted.String.ToClearText());
+            Console.WriteLine(decrypted.ToClearText());
             encrypted.Dispose();
             decrypted.Dispose();
             Console.ReadKey();
-        }
-
-        private static string SecureStringToString(SecureString secureStr)
-        {
-            var plainEncryptedCipher = new NetworkCredential("", secureStr).Password;
-            return plainEncryptedCipher;
         }
     }
 }

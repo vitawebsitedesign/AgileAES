@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>MichaelNguyen.AgileAES</PackageId>
+    <Authors>Michael Nguyen</Authors>
+    <Company />
+    <Product />
+    <Description>Easily do AES encryption and/or ciphering between clear text &amp; SecureString</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/vitawebsitedesign/AgileAES</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vitawebsitedesign/AgileAES</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>agile aes securestring secure string encrypt encryption decrypt decryption cipher decipher</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

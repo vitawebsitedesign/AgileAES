@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileAES", "AgileAES\AgileA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{9B179F1D-72A6-49FB-94BB-CCD24B2B7055}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileAES.Tests", "AgileAES.Tests\AgileAES.Tests.csproj", "{63FDE50E-D470-4758-B50A-3B5A4BD7273B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9B179F1D-72A6-49FB-94BB-CCD24B2B7055}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B179F1D-72A6-49FB-94BB-CCD24B2B7055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B179F1D-72A6-49FB-94BB-CCD24B2B7055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63FDE50E-D470-4758-B50A-3B5A4BD7273B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63FDE50E-D470-4758-B50A-3B5A4BD7273B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63FDE50E-D470-4758-B50A-3B5A4BD7273B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63FDE50E-D470-4758-B50A-3B5A4BD7273B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
