@@ -37,8 +37,8 @@ using (var aes = Aes.Create())
 ```c#
 using (var aes = Aes.Create())
 {
-    aes.Key = (the secret key that was used to encrypt);
-    aes.IV = (the initialization vector that was used to encrypt);
+    aes.Key = <the secret key that was used to encrypt>;
+    aes.IV = <the initialization vector that was used to encrypt>;
     return await Adapter.Decrypt(str, aes.Key, aes.IV);
 }
 ```
