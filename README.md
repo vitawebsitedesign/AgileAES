@@ -24,9 +24,9 @@ Decrypting:
 var decrypted = await encrypted.ToDecryptedSecureString();
 ```
 
-### Usage (detailed)
 `ToEncryptedSecureString` & `ToDecryptedSecureString` are helper methods, which also cipher the encrypted/decrypted result into base64.
 
+### Usage (no ciphering)
 If you dont wanna cipher stuff & just want to quickly do AES encryption, or want more control over the encryption parameters, you can also use the logic directly:
 ```c#
 using (var aes = Aes.Create())
