@@ -1,8 +1,6 @@
 ### What
 This .NET Standard library allows you to easily do AES encryption and/or ciphering between clear text & SecureString
 
-<TODO NUGET URL>
-
 ### Install
 ```bash
 Install-Package MichaelNguyen.AgileAES
@@ -28,8 +26,33 @@ var decrypted = await encrypted.ToDecryptedSecureString();
 
 This repo contains an "example usage" project.
 
+### Usage (custom key and/or IV)
+You can also encrypt/decrypt with a custom secret key or initialization vector:
+``` c#
+// Get a key and IV for demo purposes.
+// Usually you already have this data from an API, database, or a local file, but for completeness I'll show how to generate them anyways
+byte[] keyBytes = null;
+byte[] ivBytes = null;
+string key = null;
+string iv = null;
+using (var aes = Aes.Create())
+{
+	keyBytes = aes.Key;
+	ivBytes = aes.IV;
+	key = Convert.ToBase64String(keyBytes);
+	iv = Convert.ToBase64String(ivBytes);
+}
+
+// Encrypt with custom secret key and IV
+var encrypted = await "password".ToEncryptedSecureString(key, iv);
+
+// Decrypt with custom secret key and IV
+var secureStr = new EncryptedSecureString(encryptedCipher, key: key, iv: iv);
+var decrypted = await secureStr.ToDecryptedSecureString();
+````
+
 ### Usage (no ciphering)
-If you dont want the ciphering & just want to quickly do AES encryption, or want more control over the encryption parameters, you can also use the logic directly:
+Example of doing AES encyrption without base64 ciphering:
 ```c#
 using (var aes = Aes.Create())
 {
@@ -46,4 +69,4 @@ using (var aes = Aes.Create())
 ```
 
 ### Contributing
-Pull requests are welcome. Please ensure the test suite passes before opening a PR.
+Pull requests are welcome. Please ensure that new tests are thread-safe, & that the all test fixtures pass before opening a PR.
