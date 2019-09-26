@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace AgileAES.Tests
 {
+    [Parallelizable(ParallelScope.All)]
     internal class NoncipheredEncryptionTests
     {
         [TestCase(" ")]
@@ -15,7 +16,7 @@ namespace AgileAES.Tests
         [TestCase("test password with spaces")]
         [TestCase("01")]
         [TestCase(@"~!@#$%^&*()_+`-={}|[]\;':"",./<>?")]
-        public async Task EncryptsAndDecrypts(string input)
+        public async Task NoncipheredEncryption_EncryptsAndDecrypts(string input)
         {
             var secureStr = input.ToSecureString();
 

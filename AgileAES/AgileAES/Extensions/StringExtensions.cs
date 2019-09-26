@@ -27,9 +27,9 @@ namespace AgileAES.Extensions
         /// </summary>
         /// <param name="str">the clear text to encrypt</param>
         /// <returns>an encrypted read-only SecureString thats been ciphered in base64</returns>
-        public static async Task<EncryptedSecureString> ToEncryptedSecureString(this string str)
+        public static async Task<EncryptedSecureString> ToEncryptedSecureString(this string str, string key = null, string iv = null)
         {
-            return await str.ToSecureString().ToEncryptedSecureString();
+            return await str.ToSecureString().ToEncryptedSecureString(key: key, iv: iv);
         }
     }
 }

@@ -11,8 +11,8 @@ namespace Example
             var encrypted = await "password".ToEncryptedSecureString();
             var decrypted = await encrypted.ToDecryptedSecureString();
 
-            Console.WriteLine(encrypted.String.ToClearText());
-            Console.WriteLine(decrypted.ToClearText());
+            Console.WriteLine($"encrypted: {encrypted.String.ToClearText()}");
+            Console.WriteLine($"decrypted: {decrypted.ToClearText()}");
             encrypted.Dispose();
             decrypted.Dispose();
             Console.ReadKey();
