@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/vitawebsitedesign/AgileAES</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>agile aes securestring secure string encrypt encryption decrypt decryption cipher decipher</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
