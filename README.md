@@ -30,7 +30,7 @@ This repo contains an "example usage" project.
 You can also encrypt/decrypt with a custom secret key or initialization vector:
 ``` c#
 // Get a key and IV for demo purposes.
-// Usually you already have this data from an API, database, or a local file, but for completeness I'll show how to generate them anyways
+// Usually you already have this data from an API, database, or a local file, but for completeness I'll show how to generate some anyways
 byte[] keyBytes = null;
 byte[] ivBytes = null;
 string key = null;
