@@ -1,5 +1,7 @@
 ### What
-This .NET Standard library allows you to easily do AES encryption and/or ciphering between clear text & SecureString
+This .NET Standard library allows you to easily do AES encryption and/or ciphering between clear text & SecureString.
+
+The compiled Nuget package has been made available [on Nuget.org](https://www.nuget.org/packages/MichaelNguyen.AgileAES/)
 
 ### Install
 ```bash
