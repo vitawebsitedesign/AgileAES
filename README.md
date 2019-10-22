@@ -28,7 +28,7 @@ var decrypted = await encrypted.ToDecryptedSecureString();
 
 This repo contains an "example usage" project.
 
-Note: Realistically, decryption & encryption happen at different times. Most users probably prefer to save the key & IV to disk during encryption, then retrieve them at a later stage to decrypt. This is demonstrated in the next section for you.
+Note: Realistically, encryption & decryption happen at different times. Most users probably prefer to save the key & IV to disk during encryption, then retrieve them at a later stage to decrypt. This is demonstrated in the next section for you.
 
 ### Usage (custom key & IV)
 You can also encrypt/decrypt with a custom secret key or initialization vector:
