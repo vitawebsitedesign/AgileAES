@@ -26,9 +26,11 @@ var decrypted = await encrypted.ToDecryptedSecureString();
 
 `ToEncryptedSecureString` & `ToDecryptedSecureString` are helper methods, which also cipher/decipher the result via base64.
 
+Realistically, decryption & encryption happen at different times. Most users probably prefer to save the key & IV to disk during encryption, then retrieve them at a later stage to decrypt. This is demonstrated in the next section for you.
+
 This repo contains an "example usage" project.
 
-### Usage (custom key and/or IV)
+### Usage (custom key & IV)
 You can also encrypt/decrypt with a custom secret key or initialization vector:
 ``` c#
 // Get a key and IV for demo purposes.
