@@ -56,7 +56,7 @@ var decrypted = await secureStr.ToDecryptedSecureString();
 ````
 
 ### Usage (no ciphering)
-Example of doing AES encyrption without base64 ciphering:
+Example of doing AES encryption without base64 ciphering:
 ```c#
 using (var aes = Aes.Create())
 {
